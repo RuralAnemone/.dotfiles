@@ -1,1 +1,0 @@
-/home/ruralanemone/.bash_aliases
