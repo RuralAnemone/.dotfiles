@@ -63,6 +63,9 @@ else
 fi
 unset color_prompt force_color_prompt
 
+# calvin
+export PS1="\[\e[0m\]\[\e]0;\w\a\]\n\$? - \[\e[32m\]\u@\h \[\e[33m\]\w\[\e[94m\]\n\$\[\e[0m\] "
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
