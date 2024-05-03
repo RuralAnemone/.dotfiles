@@ -35,7 +35,7 @@ alias flex="neofetch --ascii_distro arch"
 # ======== LS ========
 # half of these are from https://redd.it/1cc4qcx/l16cbhi/
 # including the following check and my introduction to lsd:
-type lsd &> /dev/null && alias ls='LC_COLLATE=C lsd --color=auto --group-dirs first'
+type lsd &> /dev/null && alias ls='LC_COLLATE=C lsd --color=auto --group-dirs first -F'
 
 alias l="ls"
 
@@ -63,3 +63,9 @@ alias venv="python3 -m venv .venv && source .venv/bin/activate"
 
 # ======== OH MY POSH ========
 alias omp="oh-my-posh"
+
+# ======== axel ========
+alias axel="axel -n $(nproc)"
+
+# ======== grep ========
+alias ipgrep="grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'"
