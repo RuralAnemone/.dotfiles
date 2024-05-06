@@ -12,4 +12,6 @@ set nocompatible		" no backwards compatibility with vi (never used it so I don't
 " set hidden			" buffers are hidded instead of discarding (RAM usage go brr)
 
 " ======== PLUGINS ========
+source ~/.vim-plug.vim
+source ~/.config/nvim/lazy.lua
 source ~/.vundlerc.vim
