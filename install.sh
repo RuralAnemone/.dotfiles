@@ -1,3 +1,5 @@
 #!/bin/bash
 
-ln -vs ~/.dotfiles/$(find . -type f ! -name "README.md" ! -name "install.sh" | grep -vE "\.git/") ~
+for file in $(find ~/.dotfiles/ -type f ! -name "README.md" ! -name "install.sh" | grep -vE "\.git/"); do
+	ln -vs $file ~
+done
