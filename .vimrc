@@ -13,5 +13,5 @@ set nocompatible		" no backwards compatibility with vi (never used it so I don't
 
 " ======== PLUGINS ========
 source ~/.vim-plug.vim
-source ~/.config/nvim/lazy.lua
+source ~/.lazy.lua
 source ~/.vundlerc.vim
