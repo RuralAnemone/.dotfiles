@@ -118,7 +118,6 @@ fi
 # (:
 fortune | cowsay
 
-[ -f "/home/ruralanemone/.ghcup/env" ] && source "/home/ruralanemone/.ghcup/env" # ghcup-env
 PATH="/home/ruralanemone/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ruralanemone/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ruralanemone/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -149,3 +148,18 @@ export NVM_DIR="$HOME/.nvm"
 
 eval `luarocks path`
 export PATH="$PATH:/opt/nvim-linux64/bin"
+
+[ -f "/home/ruralanemone/.ghcup/env" ] && . "/home/ruralanemone/.ghcup/env" # ghcup-env
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# Created by `pipx` on 2024-05-14 14:47:08
+export PATH="$PATH:/home/ruralanemone/.local/bin"
+
+# go
+export PATH=$PATH:/usr/local/go/bin
