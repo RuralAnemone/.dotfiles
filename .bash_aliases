@@ -25,8 +25,8 @@ alias poweroff="sudo poweroff"
 
 # ======== MISC ========
 alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2"
-alias yt-dlp="yt-dlp --write-auto-subs --write-subs --embed-subs --verbose"
-alias myt-dlp="yt-dlp -x --audio-format mp3"
+alias yt-dlp="yt-dlp --write-auto-subs --write-subs --embed-subs"
+alias myt-dlp="$(which yt-dlp) -x --audio-format mp3" # to avoid conflict with previous alias
 
 # ======== FUN STUFF (: ========
 alias :q="exit"
