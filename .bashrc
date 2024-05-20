@@ -127,14 +127,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/ruralanemone/perl5"; export PERL_MM_OPT;
 # ndless sdk
 #export PATH="/home/ruralanemone/Documents/code/dum-shit/Ndless/ndless-sdk/toolchain/install/bin:/home/ruralanemone/Documents/code/dum-shit/Ndless/ndless-sdk/bin:${PATH}"
 
-# rust cargo
-. "$HOME/.cargo/env"
-
-# https://unix.stackexchange.com/a/113768 (tmux)
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux attach || tmux new -s bash;
-fi
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -163,3 +155,11 @@ export PATH="$PATH:/home/ruralanemone/.local/bin"
 
 # go
 export PATH=$PATH:/usr/local/go/bin
+
+# rust
+. "$HOME/.cargo/env"
+
+# https://unix.stackexchange.com/a/113768 (tmux)
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux attach || tmux new -s bash;
+fi
