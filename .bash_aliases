@@ -28,6 +28,8 @@ alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -p
 alias yt-dlp="yt-dlp --write-auto-subs --write-subs --embed-subs"
 alias myt-dlp="$(which yt-dlp) -x --audio-format mp3" # to avoid conflict with previous alias
 alias rd="rmdir"
+alias md="mkdir -p"
+alias o="less"
 
 # ======== FUN STUFF (: ========
 alias :q="exit"
