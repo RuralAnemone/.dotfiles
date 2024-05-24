@@ -157,9 +157,9 @@ export PATH="$PATH:/home/ruralanemone/.local/bin"
 export PATH=$PATH:/usr/local/go/bin
 
 # rust
-. "$HOME/.cargo/env"
 
 # https://unix.stackexchange.com/a/113768 (tmux)
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux attach || tmux new -s bash;
 fi
+. "$HOME/.cargo/env"

@@ -72,3 +72,7 @@ alias axel="axel -n $(nproc)"
 
 # ======== grep ========
 alias ipgrep="grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'"
+
+# ======== rust ========
+alias cargo="RUSTC_WRAPPER=sccache cargo"
+type bat &> /dev/null && alias cat="bat"
