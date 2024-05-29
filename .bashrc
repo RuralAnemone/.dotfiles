@@ -138,10 +138,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval `luarocks path`
+#eval `luarocks path`
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-[ -f "/home/ruralanemone/.ghcup/env" ] && . "/home/ruralanemone/.ghcup/env" # ghcup-env
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -163,3 +162,5 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   tmux attach || tmux new -s bash;
 fi
 . "$HOME/.cargo/env"
+
+[ -f "/home/ruralanemone/.ghcup/env" ] && . "/home/ruralanemone/.ghcup/env" # ghcup-env
