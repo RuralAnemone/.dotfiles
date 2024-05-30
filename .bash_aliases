@@ -27,6 +27,8 @@ alias poweroff="sudo poweroff"
 alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2"
 alias yt-dlp="yt-dlp --write-auto-subs --write-subs --embed-subs"
 alias myt-dlp="$(which yt-dlp) -x --audio-format mp3" # to avoid conflict with previous alias
+
+# ======== FILES ========
 alias rd="rmdir"
 alias md="mkdir -p"
 alias mkt="cd \$(mktemp -d) || exit 1"
@@ -47,6 +49,7 @@ alias l="ls"
 alias lz="ll -h"	# list, abbreviate siZe
 alias la="l -a"
 alias lt="ll -rt"	# list ordered by date
+alias lT="ll -t"    # list ordered by date (reversed)
 alias lh="ll -d .*"	# list only hidden files/dirs
 
 # long versions:
@@ -76,4 +79,5 @@ alias axel="axel -n $(nproc)"
 alias ipgrep="grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'"
 
 # ======== rust ========
-alias cargo="RUSTC_WRAPPER=sccache cargo"
+type sccache &> /dev/null || echo install sccache to use cargo alias
+type sccache &> /dev/null && alias cargo="RUSTC_WRAPPER=sccache cargo"
