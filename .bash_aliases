@@ -31,6 +31,7 @@ alias rd="rmdir"
 alias md="mkdir -p"
 alias mkt="cd \$(mktemp -d) || exit 1"
 alias o="less"
+type bat &> /dev/null && alias o="bat"
 
 # ======== FUN STUFF (: ========
 alias :q="exit"
