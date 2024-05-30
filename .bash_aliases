@@ -26,7 +26,7 @@ alias poweroff="sudo poweroff"
 # ======== MISC ========
 alias webcam="gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2"
 alias yt-dlp="yt-dlp --write-auto-subs --write-subs --embed-subs"
-alias myt-dlp="$(which yt-dlp) -x --audio-format mp3" # to avoid conflict with previous alias
+alias myt-dlp="\$(which yt-dlp) -x --audio-format mp3" # to avoid conflict with previous alias
 
 # ======== FILES ========
 alias rd="rmdir"
@@ -73,7 +73,7 @@ alias venv="python3 -m venv .venv && source .venv/bin/activate"
 alias omp="oh-my-posh"
 
 # ======== axel ========
-alias axel="axel -n $(nproc)"
+alias axel="axel -n \$(nproc)"
 
 # ======== grep ========
 alias ipgrep="grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'"
