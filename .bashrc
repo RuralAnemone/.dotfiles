@@ -150,9 +150,12 @@ export PATH=$PATH:/usr/local/go/bin
 # rust
 
 # https://unix.stackexchange.com/a/113768 (tmux)
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ -z "$VSCODE_SHELL_INTEGRATION" ]; then
   tmux attach || tmux new -s bash;
 fi
+
+if [ $VSCODE_SHELL_INTEGRATION ]; then tmux a -t code || tmux new -s code; fi
+
 . "$HOME/.cargo/env"
 
 [ -f "/home/ruralanemone/.ghcup/env" ] && . "/home/ruralanemone/.ghcup/env" # ghcup-env
