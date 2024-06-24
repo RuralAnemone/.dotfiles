@@ -49,13 +49,15 @@ alias l="ls"
 alias lz="ll -h"	# list, abbreviate siZe
 alias la="l -a"
 alias lt="ll -rt"	# list ordered by date
-alias lT="ll -t"    # list ordered by date (reversed)
+alias lT="ll -t"    	# list ordered by date (reversed)
 alias lh="ll -d .*"	# list only hidden files/dirs
+alias lr="l --tree"	# list, tRee (or RecuRsive)
 
 # long versions:
 alias ll="l -l"
-alias llz="ll -z"
-alias lla="ll -a"
+alias llz="lz -l"
+alias lla="la -l"
+alias llr="lr -l"
 
 # ======== NGROK ========
 alias ngrok-domain="ngrok http --domain=poodle-gorgeous-leopard.ngrok-free.app"
@@ -72,8 +74,9 @@ alias venv="python3 -m venv .venv && source .venv/bin/activate"
 # ======== OH MY POSH ========
 alias omp="oh-my-posh"
 
-# ======== axel ========
+# ======== threading ========
 alias axel="axel -n \$(nproc)"
+alias spotdl="spotdl --threads \$(nproc)"
 
 # ======== grep ========
 alias ipgrep="grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'"
